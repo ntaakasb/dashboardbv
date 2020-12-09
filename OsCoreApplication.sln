@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsCoreApplication", "OsCoreApplication\OsCoreApplication.csproj", "{D13AE626-DFE0-41B3-A846-7B1A980029BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsCoreApplication.DataLayer", "OsCoreApplication.DataLayer\OsCoreApplication.DataLayer.csproj", "{706D6C54-194A-495B-96F4-0CB685319280}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsCoreApplication.Services", "OsCoreApplication.Services\OsCoreApplication.Services.csproj", "{C48B2BED-FD00-4ED0-AA40-E65E1675DF1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsCoreApplication.ViewModel", "OsCoreApplication.ViewModel\OsCoreApplication.ViewModel.csproj", "{FFEE3413-0616-4DC9-90F3-A19CC89C7E19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsCoreApplication.Configuration", "OsCoreApplication.Configuration\OsCoreApplication.Configuration.csproj", "{49410471-A8B9-484C-8EA3-0181B770135E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsCoreApplication.Libraries", "OsCoreApplication.Libraries\OsCoreApplication.Libraries.csproj", "{F9606296-7764-4FE9-A8C2-A535996FDAC0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsCoreApplication.Logger", "OsCoreApplication.Logger\OsCoreApplication.Logger.csproj", "{5B23095E-FE14-401F-94AF-7E143D193B06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsCoreApplication.Test", "OsCoreApplication.Test\OsCoreApplication.Test.csproj", "{F91F497C-EE5B-4978-BF3F-3E75A6F60146}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsCoreApplication.Authorize", "OsCoreApplication.Authorize\OsCoreApplication.Authorize.csproj", "{73BA3F70-C363-41FD-B90E-80EF8BCF35AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OsCoreApplication.Common", "OsCoreApplication.Common\OsCoreApplication.Common.csproj", "{3DD7D14F-04AC-4A2A-9728-710400A372EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D13AE626-DFE0-41B3-A846-7B1A980029BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13AE626-DFE0-41B3-A846-7B1A980029BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13AE626-DFE0-41B3-A846-7B1A980029BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13AE626-DFE0-41B3-A846-7B1A980029BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{706D6C54-194A-495B-96F4-0CB685319280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{706D6C54-194A-495B-96F4-0CB685319280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{706D6C54-194A-495B-96F4-0CB685319280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{706D6C54-194A-495B-96F4-0CB685319280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C48B2BED-FD00-4ED0-AA40-E65E1675DF1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C48B2BED-FD00-4ED0-AA40-E65E1675DF1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C48B2BED-FD00-4ED0-AA40-E65E1675DF1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C48B2BED-FD00-4ED0-AA40-E65E1675DF1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFEE3413-0616-4DC9-90F3-A19CC89C7E19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFEE3413-0616-4DC9-90F3-A19CC89C7E19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFEE3413-0616-4DC9-90F3-A19CC89C7E19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFEE3413-0616-4DC9-90F3-A19CC89C7E19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49410471-A8B9-484C-8EA3-0181B770135E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49410471-A8B9-484C-8EA3-0181B770135E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49410471-A8B9-484C-8EA3-0181B770135E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49410471-A8B9-484C-8EA3-0181B770135E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9606296-7764-4FE9-A8C2-A535996FDAC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9606296-7764-4FE9-A8C2-A535996FDAC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9606296-7764-4FE9-A8C2-A535996FDAC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9606296-7764-4FE9-A8C2-A535996FDAC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B23095E-FE14-401F-94AF-7E143D193B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B23095E-FE14-401F-94AF-7E143D193B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B23095E-FE14-401F-94AF-7E143D193B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B23095E-FE14-401F-94AF-7E143D193B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F91F497C-EE5B-4978-BF3F-3E75A6F60146}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F91F497C-EE5B-4978-BF3F-3E75A6F60146}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F91F497C-EE5B-4978-BF3F-3E75A6F60146}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F91F497C-EE5B-4978-BF3F-3E75A6F60146}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73BA3F70-C363-41FD-B90E-80EF8BCF35AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73BA3F70-C363-41FD-B90E-80EF8BCF35AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73BA3F70-C363-41FD-B90E-80EF8BCF35AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73BA3F70-C363-41FD-B90E-80EF8BCF35AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DD7D14F-04AC-4A2A-9728-710400A372EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DD7D14F-04AC-4A2A-9728-710400A372EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DD7D14F-04AC-4A2A-9728-710400A372EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DD7D14F-04AC-4A2A-9728-710400A372EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {56FA0A84-45E7-43F2-8A06-F06011F63A6C}
+	EndGlobalSection
+EndGlobal

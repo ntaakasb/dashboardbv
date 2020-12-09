@@ -1,0 +1,51 @@
+﻿@using OsCoreApplication.Common
+@using OsCoreApplication.DataLayer.EFModel
+@using OsCoreApplication.ViewModel.Models
+
+@{
+    ViewBag.Title = "Trang chủ";
+    List<ConfigWebModels> configWebs = ViewBag.ConfigWebHome as List<ConfigWebModels>;
+    string slogonAbout = configWebs.FirstOrDefault(o => o.KeyConfig == "SLG_ABOUT").ValueConfig;
+    string contentAbout = configWebs.FirstOrDefault(o => o.KeyConfig == "CONTENT_ABOUT").ValueConfig;
+
+}
+
+
+
+<div class="row margin-leftright-null">
+
+    <div class="container">
+        <div class="row margin-leftright-null  home-aboutus">
+
+            <div class="col-md-12">
+
+                <div class="row">
+                    <!--  List Project Header -->
+                    <div class="col-md-12 padding-onlybottom-md text-center">
+                        <h2 class="margin-bottom-null title line center">MỘT CHỬ TÍN - VẠN NIỀM TIN</h2>
+                        @*<p class="heading center grey margin-bottom-null">Những dự án tiềm năng của BĐS Hoàng Liên Sơn</p>*@
+                    </div>
+                    <!--  END Project Header -->
+
+                </div>
+                <div class="row">
+
+                    <div class="content-aboutus">
+                        <p>@Html.Raw(WebUtility.HtmlDecode(contentAbout))</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+            $('.content-aboutus').html(unescape('@contentAbout'));
+
+        });
+    </script>
+    }

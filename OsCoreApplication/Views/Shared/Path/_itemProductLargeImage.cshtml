@@ -1,0 +1,47 @@
+﻿@using OsCoreApplication.ViewModel.Models
+@using OsCoreApplication.Common
+@model ProjectModels
+@if (Model != null)
+{
+    string router = "Project Deatail";
+    if (Model.idCategory == 1)
+    {
+        router = "Project Binh Duong East Deatail";
+    }
+    if (Model.idCategory == 2)
+    {
+        router = "Project Sale Deatail";
+    }
+    if (Model.idCategory == 3)
+    {
+        router = "Project Lease Deatail";
+    }
+
+    <div class="col-md-3 single-person">
+        <div class="content" style="position:relative">
+            @if (Model.IsSaled == true)
+            {
+                <span class="IsSaled">
+                    Đã bán
+                </span>
+            }
+            <div class="cover" onclick="">
+                <div class="child-image" style="background-image:url(@Model.Thumbnail)">
+                </div>
+            </div>
+        </div>
+        <div class="description text-center">
+            <h5 style="text-align: left;">
+                @Html.RouteLink(
+                           @Model.ProjectName, router,
+                           new { id = Model.id, metatitle = ClsCommon.CreateMetatitle(Model.ProjectName) },
+                           new { @class = "project-name" })
+            </h5>
+            <h6 style="font-size: 14px; text-align: left;">
+                <b><i style="font-size: 15px" class="icon icon icon ion-location"></i> Địa chỉ: </b>
+                @Model.Address
+            </h6>
+            <h6 style="font-size: 14px; text-align: left; font-weight: bold;">Giá: <span style="color: red">@Model.Price</span></h6>
+        </div>
+    </div>
+}

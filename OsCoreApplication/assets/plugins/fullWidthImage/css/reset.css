@@ -1,0 +1,35 @@
+html, body, header, footer, section, article, nav, div, img, form, input, textarea, select, optgroup, option, label, table, caption, thead, tbody, tfoot, tr, th, td, dl, dt, dd, ol, ul, li, pre, p, h1, h2, h3, h4, h5, h6, span, br, hr, a {margin:0; padding:0; border:0; vertical-align:baseline;}
+table {width:100%; border-collapse:separate; border-spacing:1px; vertical-align:middle; cursor:default;}
+ol, ul {list-style:none;}
+h1, h2, h3, h4, h5, h6 {font-size:100%;}
+a {text-decoration:none; outline:none;}
+/* CUSTOM */
+div.table {width:100%; display:table;}
+div.table>div.row {width:inherit; display:table-row;}
+._1, ._2, ._3, ._4, ._5, ._6, ._7, ._8, ._9, ._10, ._11, ._12 {width:100%; padding:10px 5px; float:left; box-sizing:border-box; display:table-cell;}
+@media only screen and (min-width:768px)
+{
+._1_, ._2_, ._3_, ._4_, ._5_, ._6_ {padding:15px 10px;}
+._1_ {width:16.66%;}
+._2_ {width:33.33%;}
+._3_ {width:50%;}
+._4_ {width:66.66%;}
+._5_ {width:83.33%;}
+._6_ {width:100%;}
+}
+@media only screen and (min-width:1200px)
+{
+._1, ._2, ._3, ._4, ._5, ._6, ._7, ._8, ._9, ._10, ._11, ._12 {padding:20px 15px;}
+._1 {width:8.33%;}
+._2 {width:16.66%;}
+._3 {width:25%;}
+._4 {width:33.33%;}
+._5 {width:41.66%;}
+._6 {width:50%;}
+._7 {width:58.33%;}
+._8 {width:66.66%;}
+._9 {width:75%;}
+._10 {width:83.33%;}
+._11 {width:91.66%;}
+._12 {width:100%;}
+}

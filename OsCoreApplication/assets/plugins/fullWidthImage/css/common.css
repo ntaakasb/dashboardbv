@@ -1,0 +1,50 @@
+div#frame {width:100%; min-width:320px; margin:0 auto;}
+@media only screen and (min-width:1200px)
+{
+div#frame {width:1200px;}
+}
+/* GALLERY */
+div.gallery {width:100%; min-width:320px; float:left; background:#708090;}
+div.gallery>div {width:50%; margin:0 0 1px; float:left; background:#363636; border-right:1px solid #708090; box-sizing:border-box;}
+div.gallery>div>h1 {color:#ffffff; font:0.8em/30px arial, sans-serif; text-align:center; cursor:default;}
+div.gallery>div>a>img {max-width:160px; height:120px; margin:0 auto 20px; padding:0 5px; box-sizing:border-box; display:block;}
+div.gallery>div.eol {border:0;}
+div#background {width:100%; height:100%; position:fixed; top:0; left:0; background:#000000; cursor:default; z-index:9999;}
+div#background>div.content {width:inherit; height:50px; position:absolute; color:#ffffff; background:#1d1d1d; font:0.9em/50px arial, sans-serif; text-align:center; box-sizing:border-box; z-index:10000; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none;}
+div#background>div.content.top {top:0; border-bottom:1px solid #708090;}
+div#background>div.content.bottom {bottom:0; border-top:1px solid #708090;}
+div#background>div.menu {width:50px; height:50px; position:absolute; top:0; left:0; display:none; cursor:pointer; z-index:10000;}
+div#background>div.close {width:50px; height:50px; position:absolute; top:0; right:0; cursor:pointer; z-index:10000;}
+div#background>div.menu>img, div#background>div.close>img {width:42px; height:42px; margin:4px;}
+div#background>div.loading {width:50px; height:50px; position:fixed; background:#708090; z-index:10000;}
+div#background>div.loading>img {width:50px; height:50px; margin:auto; position:absolute; top:0; right:0; bottom:0; left:0;}
+div#background>div.next, div#background>div.previous {width:50%; height:100%; position:relative; top:0; display:block; cursor:pointer;}
+div#background>div.next {float:right;}
+div#background>div.previous {float:left;}
+div#background>div.next>img, div#background>div.previous>img {width:auto; height:50px; margin:auto; position:absolute; top:0; bottom:0;}
+div#background>div.next>img {right:0;}
+div#background>div.previous>img {left:0;}
+div#foreground {position:fixed; border:1px solid #708090; box-sizing:border-box; overflow:hidden; display:none; cursor:default; z-index:10000;}
+div#foreground>div.image {position:absolute; top:0; left:0;}
+div#foreground>ul {min-width:280px; padding:0 1px; position:absolute; background:#708090; box-sizing:border-box; display:none; z-index:10001;}
+div#foreground>ul>li {width:100%; margin:1px 0; color:#ffffff; background:#000000; opacity:0.9; font:0.9em/25px arial, sans-serif; text-align:center;}
+div#foreground>ul>li:hover {background:#708090; cursor:pointer;}
+@media only screen and (min-width:768px)
+{
+div.gallery>div {width:33.33%;}
+div.gallery>div>h1 {font-size:0.9em;}
+div#background>div.content {font-size:1.1em;}
+div#foreground>ul>li {font-size:1em; line-height:30px;}
+}
+@media only screen and (min-width:1024px)
+{
+div.gallery>div {width:25%;}
+div.gallery>div>h1 {font-size:1em;}
+div#background>div.content {font-size:1.3em;}
+}
+@media only screen and (min-width:1200px)
+{
+div.gallery>div {width:20%;}
+div.gallery>div>h1 {font-size:1.1em;}
+div#background>div.content {font-size:1.4em;}
+}
