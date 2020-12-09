@@ -58,28 +58,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IServices\IAccount.cs" />
-    <Compile Include="IServices\IBanner.cs" />
-    <Compile Include="IServices\IConfigWeb.cs" />
-    <Compile Include="IServices\IContact.cs" />
-    <Compile Include="IServices\IImagesUpload.cs" />
-    <Compile Include="IServices\Inews.cs" />
-    <Compile Include="IServices\INewsCategory.cs" />
-    <Compile Include="IServices\IOsAccount.cs" />
-    <Compile Include="IServices\IProject.cs" />
-    <Compile Include="IServices\IProjectImages.cs" />
+    <Compile Include="IServices\IServices.cs" />
     <Compile Include="IServices\ITransactionProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\AccountServices.cs" />
-    <Compile Include="Services\BannerServices.cs" />
-    <Compile Include="Services\ConfigWebServices.cs" />
-    <Compile Include="Services\ContactServices.cs" />
-    <Compile Include="Services\ImagesUploadServices.cs" />
-    <Compile Include="Services\NewsCategoryServices.cs" />
-    <Compile Include="Services\NewsServices.cs" />
-    <Compile Include="Services\OsAccountServices.cs" />
-    <Compile Include="Services\ProjectImagesServices.cs" />
-    <Compile Include="Services\ProjectServices.cs" />
+    <Compile Include="Services\Services.cs" />
     <Compile Include="Services\TransactionProvider.cs" />
   </ItemGroup>
   <ItemGroup>

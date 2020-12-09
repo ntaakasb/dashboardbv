@@ -12,16 +12,9 @@ namespace OsCoreApplication.DataLayer.EFModel
     using System;
     using System.Collections.Generic;
     
-    public partial class Account
+    public partial class TB_HINHTHUCKCB
     {
-        public long id { get; set; }
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string Email { get; set; }
-        public Nullable<System.DateTime> DateCreated { get; set; }
-        public Nullable<System.DateTime> DateUpdated { get; set; }
-        public Nullable<long> UserCreated { get; set; }
-        public Nullable<long> UserUpdated { get; set; }
-        public Nullable<bool> IsAdmin { get; set; }
+        public int MAHTKCB { get; set; }
+        public string TENHTKCB { get; set; }
     }
 }

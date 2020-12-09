@@ -10,8 +10,10 @@
     <title>SB Admin 2 - Dashboard</title>
     <!-- Custom fonts for this template-->
     <link href="/content/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"    rel="stylesheet">
+
+    <link href="~/Content/plugins/jquery.datetimepicker.css" rel="stylesheet" />
+
     <!-- Custom styles for this template-->
     <link href="/content/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
@@ -31,10 +33,10 @@
             <hr class="sidebar-divider my-0">
             <!-- Nav Item - Dashboard -->
             <!--  <li class="nav-item active">
-            <a class="nav-link" href="index.html">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
-                <span>Dashboard</span></a>
-        </li> -->
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li> -->
             <!-- Divider -->
             <!--  <hr class="sidebar-divider"> -->
             <!-- Heading -->
@@ -111,14 +113,14 @@
             <!--  <hr class="sidebar-divider d-none d-md-block"> -->
             <!-- Sidebar Toggler (Sidebar) -->
             <!-- <div class="text-center d-none d-md-inline">
-            <button class="rounded-circle border-0" id="sidebarToggle"></button>
-        </div> -->
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div> -->
             <!-- Sidebar Message -->
             <!-- <div class="sidebar-card">
-            <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">
-            <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-            <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
-        </div> -->
+                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="">
+                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
+                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+            </div> -->
         </ul>
         <!-- End of Sidebar -->
         <!-- Content Wrapper -->
@@ -135,32 +137,32 @@
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!--  <li class="nav-item">
-                        <h1 class="h3 mb-0 text-gray-800">Thống kê số lượng bệnh nhân theo trạng thái KCB</h1>
-                    </li> -->
+                            <h1 class="h3 mb-0 text-gray-800">Thống kê số lượng bệnh nhân theo trạng thái KCB</h1>
+                        </li> -->
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
                         <!--   <li class="nav-item dropdown no-arrow d-sm-none">
-                                               <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                   <i class="fas fa-search fa-fw"></i>
-                                               </a>
+                                                   <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                       <i class="fas fa-search fa-fw"></i>
+                                                   </a>
 
-                                               <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                                   aria-labelledby="searchDropdown">
-                                                   <form class="form-inline mr-auto w-100 navbar-search">
-                                                       <div class="input-group">
-                                                           <input type="text" class="form-control bg-light border-0 small"
-                                                               placeholder="Search for..." aria-label="Search"
-                                                               aria-describedby="basic-addon2">
-                                                           <div class="input-group-append">
-                                                               <button class="btn btn-primary" type="button">
-                                                                   <i class="fas fa-search fa-sm"></i>
-                                                               </button>
+                                                   <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                                       aria-labelledby="searchDropdown">
+                                                       <form class="form-inline mr-auto w-100 navbar-search">
+                                                           <div class="input-group">
+                                                               <input type="text" class="form-control bg-light border-0 small"
+                                                                   placeholder="Search for..." aria-label="Search"
+                                                                   aria-describedby="basic-addon2">
+                                                               <div class="input-group-append">
+                                                                   <button class="btn btn-primary" type="button">
+                                                                       <i class="fas fa-search fa-sm"></i>
+                                                                   </button>
+                                                               </div>
                                                            </div>
-                                                       </div>
-                                                   </form>
-                                               </div>
-                                           </li>
-                    -->
+                                                       </form>
+                                                   </div>
+                                               </li>
+                        -->
                         <!-- Nav Item - Alerts -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
@@ -321,7 +323,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     @RenderBody()
-                  
+
                 </div>
                 <!-- /.container-fluid -->
             </div>
@@ -336,7 +338,7 @@
             </footer>
             <!-- End of Footer -->
         </div>
-       
+
 
         <!-- End of Content Wrapper -->
     </div>
@@ -374,7 +376,10 @@
     <!-- Page level plugins -->
     <script src="/content/vendor/chart.js/Chart.min.js"></script>
     <!-- Page level custom scripts -->
-    <script src="/content/js/demo/chart-area-demo.js"></script>
-    <script src="/content/js/demo/chart-pie-demo.js"></script>
+   
+    <script>
+        $.datetimepicker.setLocale('en');
+    </script>
+    @RenderSection("Scripts", true)
 </body>
 </html>

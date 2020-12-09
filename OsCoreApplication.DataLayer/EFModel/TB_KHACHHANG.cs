@@ -12,14 +12,13 @@ namespace OsCoreApplication.DataLayer.EFModel
     using System;
     using System.Collections.Generic;
     
-    public partial class Banner
+    public partial class TB_KHACHHANG
     {
-        public long id { get; set; }
-        public string ImageUrl { get; set; }
-        public Nullable<bool> IsShow { get; set; }
-        public Nullable<System.DateTime> DateCreated { get; set; }
-        public Nullable<System.DateTime> DateUpdated { get; set; }
-        public Nullable<long> UserCreated { get; set; }
-        public Nullable<long> UserUpdated { get; set; }
+        public int MAKH { get; set; }
+        public string TENKH { get; set; }
+        public string NAMSINH { get; set; }
+        public Nullable<bool> GIOITINH { get; set; }
+        public string DIACHI { get; set; }
+        public Nullable<bool> DKBHYT { get; set; }
     }
 }

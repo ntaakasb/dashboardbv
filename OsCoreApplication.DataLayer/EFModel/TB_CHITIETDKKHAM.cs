@@ -12,11 +12,13 @@ namespace OsCoreApplication.DataLayer.EFModel
     using System;
     using System.Collections.Generic;
     
-    public partial class ProjectImage
+    public partial class TB_CHITIETDKKHAM
     {
-        public long id { get; set; }
-        public Nullable<long> idProject { get; set; }
-        public string ImageUrl { get; set; }
-        public Nullable<System.DateTime> DateCreate { get; set; }
+        public int MADK { get; set; }
+        public int MAKH { get; set; }
+        public Nullable<int> MAPK { get; set; }
+        public System.DateTime NGAYDANGKY { get; set; }
+        public Nullable<int> MATRANGTHAI { get; set; }
+        public Nullable<int> MAHTKCB { get; set; }
     }
 }

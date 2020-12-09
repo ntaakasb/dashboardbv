@@ -1,10 +1,53 @@
-﻿  <!-- Page Heading -->
-<!--  <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Thống kê số lượng bệnh nhân theo trạng thái KCB</h1>
-    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-</div> -->
-<!-- Content Row -->
+﻿@using OsCoreApplication.ViewModel.Models;
+@{
+    var thongke = ViewBag.ThongKe as ThongKeModel;
+    var thongkeTheoKhoa = ViewBag.ThongKeTheoKhoa as ThongKeTheoChuyenKhoa;
+    long dangky = 0;
+    long chokham = 0;
+    long dangkham = 0;
+    long dakham = 0;
+    if (thongke != null)
+    {
+
+        chokham = thongke.ChoKham;
+        dangkham = thongke.DaKham;
+        dakham = thongke.DangKham;
+        dangky = chokham + dangkham + dakham;
+    }
+}
+
+<div class="row">
+    <div class="col-xl-12 col-md-12 mb-4">
+        <div class="card border-left-primary shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2 form-group">
+                        <div class="text-xs font-weight-bold text-primary text-uppercase">
+                            Xem theo
+                        </div>
+                    </div>
+                    <div class="col-md-2 form-group">
+                        <select class="form-control">
+                            <option value="DATE">Ngày</option>
+                            <option value="WEEK">Tuần</option>
+                            <option value="MONTH">Tháng</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <div class="input-group date">
+                            <input type="text" class="form-control" id="datetimepicker" value="@DateTime.Now">
+                            <div class="input-group-addon">
+                                <span class="glyphicon glyphicon-th"></span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="row">
     <!-- Earnings (Monthly) Card Example -->
     <div class="col-xl-3 col-md-6 mb-4">
@@ -15,7 +58,7 @@
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                             Tổng số BN đã đăng ký
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">320</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">@dangky</div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -33,7 +76,7 @@
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                             Tổng số BN chờ khám
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">315</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">@chokham</div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -51,7 +94,7 @@
                         <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                             Tổng số BN đang khám
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">@dangkham</div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -70,7 +113,7 @@
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                             Tổng số BN đã khám xong
                         </div>
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">315</div>
+                        <div class="h5 mb-0 font-weight-bold text-gray-800">@dakham</div>
                     </div>
                     <div class="col-auto">
                         <i class="fas fa-user fa-2x text-gray-300"></i>
@@ -141,13 +184,13 @@
                 </div>
                 <div class="mt-4 text-center small">
                     <span class="mr-2">
-                        <i class="fas fa-circle text-primary"></i> Số bệnh nhân đã khám xong
+                        <i class="fas fa-circle text-primary"></i> Số bệnh nhân chờ khám
                     </span>
                     <span class="mr-2">
                         <i class="fas fa-circle text-success"></i> Số bệnh nhân đang khám
                     </span>
                     <span class="mr-2">
-                        <i class="fas fa-circle text-info"></i> Số bệnh nhân đăng ký
+                        <i class="fas fa-circle text-info"></i> Số bệnh nhân đã khám
                     </span>
                 </div>
             </div>
@@ -163,40 +206,56 @@
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Thống kê số lượng bệnh nhân theo chuyên khoa</h6>
             </div>
+            @{
+                long KhoaNoi = thongkeTheoKhoa.KhoaNoi;
+                float tileKhoaNoi  = ((float)thongkeTheoKhoa.KhoaNoi / (float)thongkeTheoKhoa.TongSo) *100;
+
+                long KhoaNgoai = thongkeTheoKhoa.KhoaNgoai;
+                float tileKhoaNgoai = ((float)thongkeTheoKhoa.KhoaNgoai / (float)thongkeTheoKhoa.TongSo) * 100;
+
+                long KhoaDongY = thongkeTheoKhoa.KhoaDongY;
+                float tileKhoaDongY = ((float)thongkeTheoKhoa.KhoaDongY / (float)thongkeTheoKhoa.TongSo) * 100;
+
+                long KhoaUngBieu = thongkeTheoKhoa.KhoaUngBieu;
+                float tileKhoaUngBieu = ((float)thongkeTheoKhoa.KhoaUngBieu / (float)thongkeTheoKhoa.TongSo) * 100;
+
+                long KhoaKhac = thongkeTheoKhoa.KhoaKhac;
+                float tileKhoaKhac = ((float)thongkeTheoKhoa.KhoaKhac / (float)thongkeTheoKhoa.TongSo) * 100;
+            }
             <div class="card-body">
                 <h4 class="small font-weight-bold">
-                    Chuyên khoa Nội<span class="float-right">20%</span>
+                    Chuyên khoa Nội<span class="float-right">@(KhoaNoi + " người / " + tileKhoaNoi + " %")</span>
                 </h4>
                 <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                    <div class="progress-bar bg-danger" role="progressbar" style="width: @(tileKhoaNoi)%"
                          aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <h4 class="small font-weight-bold">
-                    Chuyên khoa Ngoại<span class="float-right">40%</span>
+                    Chuyên khoa Ngoại<span class="float-right">@(KhoaNgoai + " người / " + tileKhoaNgoai + " %")</span>
                 </h4>
                 <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
+                    <div class="progress-bar bg-warning" role="progressbar" style="width: @(tileKhoaNgoai)%"
                          aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <h4 class="small font-weight-bold">
-                    Chuyên khoa Đông Y <span class="float-right">60%</span>
+                    Chuyên khoa Đông Y <span class="float-right">@(KhoaDongY + " người / " + tileKhoaDongY + " %")</span>
                 </h4>
                 <div class="progress mb-4">
-                    <div class="progress-bar" role="progressbar" style="width: 60%"
+                    <div class="progress-bar" role="progressbar" style="width: @(tileKhoaDongY)%"
                          aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <h4 class="small font-weight-bold">
-                    Chuyên khoa Ung Bướu <span class="float-right">80%</span>
+                    Chuyên khoa Ung Bướu <span class="float-right">@(KhoaUngBieu + " người / " + tileKhoaUngBieu + " %")</span>
                 </h4>
                 <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
+                    <div class="progress-bar bg-info" role="progressbar" style="width: @(tileKhoaUngBieu)%"
                          aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
                 <h4 class="small font-weight-bold">
-                    Chuyên khoa khác <span class="float-right">50%</span>
+                    Chuyên khoa khác <span class="float-right">@(KhoaKhac + " người / " + tileKhoaKhac + " %")</span>
                 </h4>
                 <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%"
+                    <div class="progress-bar bg-success" role="progressbar" style="width: @(tileKhoaKhac)%"
                          aria-valuenow="50" aria-valuemin="0" aria-valuemax="50"></div>
                 </div>
             </div>
@@ -310,3 +369,20 @@
         </div>
     </div>
 </div>
+
+@section Scripts {
+
+    <script src="~/Content/plugins/jquery.datetimepicker.js"></script>
+    <script>
+        var ls =  @Html.Raw(Json.Encode(ViewBag.DetailInWeek));
+        var lsPieDate = [@chokham, @dakham, @dangkham];
+        $('#datetimepicker').datetimepicker({
+            dayOfWeekStart: 1,
+            lang: 'en',
+            disabledDates: ['1986/01/08', '1986/01/09', '1986/01/10'],
+            startDate: '1986/01/05'
+        });
+    </script>
+    <script src="/content/js/demo/chart-area-demo.js"></script>
+    <script src="/content/js/demo/chart-pie-demo.js"></script>
+}

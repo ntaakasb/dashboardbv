@@ -55,24 +55,6 @@
   <ItemGroup>
     <Compile Include="DataAccess\Repository.cs" />
     <Compile Include="DataAccess\UnitOfWork.cs" />
-    <Compile Include="EFModel\Account.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EFModel\Banner.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EFModel\Category.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EFModel\ConfigWeb.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EFModel\Contact.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EFModel\ImagesUpload.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="EFModel\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -88,16 +70,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
-    <Compile Include="EFModel\News.cs">
+    <Compile Include="EFModel\TB_CHITIETDKKHAM.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="EFModel\NewsCategory.cs">
+    <Compile Include="EFModel\TB_HINHTHUCKCB.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="EFModel\Project.cs">
+    <Compile Include="EFModel\TB_KHACHHANG.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="EFModel\ProjectImage.cs">
+    <Compile Include="EFModel\TB_PHONGKHAM.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFModel\TB_TRANGTHAI.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\IRepository.cs" />
@@ -118,6 +103,7 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="EFModel\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

@@ -9,16 +9,10 @@ namespace OsCoreApplication.DataLayer.Infrastructure
 
         void SaveChanges();
 
-        IRepository<Banner> BannerRepository { get; }
-        IRepository<ConfigWeb> ConfigWebRepository { get; }
-        IRepository<Project> ProjectRepository { get; }
-        IRepository<NewsCategory> NewsCategoryRepository { get; }
-        IRepository<News> NewsRepository { get; } 
-        IRepository<Contact> ContactRepository { get;}
-        IRepository<Account> AccountRepository { get; }
-        IRepository<ProjectImage> ProjectImagesRepository { get; }
-        IRepository<ImagesUpload> ImagesUploadRepository { get; }
-
+        IRepository<TB_KHACHHANG> KhachHangRepository { get; }
+        IRepository<TB_CHITIETDKKHAM> DKKhamRepository { get; }
         //  IRepository<OS_Schedule> ScheduleRepository { get; }
+
+
     }
 }

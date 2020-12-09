@@ -32,7 +32,7 @@ var ctx = document.getElementById("myAreaChart");
 var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
-    labels: ["5:00", "6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "13:00", "14:00", "14:00", "15:00", "16:00"],
+      labels: ["Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7", "Chủ nhật"],
     datasets: [{
       label: "Số người: ",
       lineTension: 0.3,
@@ -46,7 +46,9 @@ var myLineChart = new Chart(ctx, {
       pointHoverBorderColor: "rgba(78, 115, 223, 1)",
       pointHitRadius: 10,
       pointBorderWidth: 2,
-      data: [0, 1000, 2000, 1500, 1000, 2000, 1500, 2500, 2000, 1000, 500, 300],
+      //data: [0, 1000, 2000, 1500, 1000, 2000, 1500, 2500, 2000, 1000, 500, 300],
+        data: ls,
+        
     }],
   },
   options: {

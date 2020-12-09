@@ -12,13 +12,9 @@ namespace OsCoreApplication.DataLayer.EFModel
     using System;
     using System.Collections.Generic;
     
-    public partial class NewsCategory
+    public partial class TB_TRANGTHAI
     {
-        public long id { get; set; }
-        public string NewsCategoryName { get; set; }
-        public Nullable<System.DateTime> DateCreated { get; set; }
-        public Nullable<System.DateTime> DateUpdated { get; set; }
-        public Nullable<long> UserCreated { get; set; }
-        public Nullable<long> UserUpdated { get; set; }
+        public int MATRANGTHAI { get; set; }
+        public string TENTRANGTHAI { get; set; }
     }
 }

@@ -25,15 +25,10 @@ namespace OsCoreApplication.DataLayer.EFModel
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Banner> Banners { get; set; }
-        public virtual DbSet<Category> Categories { get; set; }
-        public virtual DbSet<ConfigWeb> ConfigWebs { get; set; }
-        public virtual DbSet<Project> Projects { get; set; }
-        public virtual DbSet<News> News { get; set; }
-        public virtual DbSet<NewsCategory> NewsCategories { get; set; }
-        public virtual DbSet<Contact> Contacts { get; set; }
-        public virtual DbSet<Account> Accounts { get; set; }
-        public virtual DbSet<ProjectImage> ProjectImages { get; set; }
-        public virtual DbSet<ImagesUpload> ImagesUploads { get; set; }
+        public virtual DbSet<TB_CHITIETDKKHAM> TB_CHITIETDKKHAM { get; set; }
+        public virtual DbSet<TB_HINHTHUCKCB> TB_HINHTHUCKCB { get; set; }
+        public virtual DbSet<TB_KHACHHANG> TB_KHACHHANG { get; set; }
+        public virtual DbSet<TB_PHONGKHAM> TB_PHONGKHAM { get; set; }
+        public virtual DbSet<TB_TRANGTHAI> TB_TRANGTHAI { get; set; }
     }
 }

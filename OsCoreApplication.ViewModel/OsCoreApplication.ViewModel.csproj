@@ -44,14 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\BannerModels.cs" />
-    <Compile Include="Models\ConfigWebModels.cs" />
-    <Compile Include="Models\ContactModels.cs" />
-    <Compile Include="Models\NewsCategoryModels.cs" />
-    <Compile Include="Models\NewsModels.cs" />
-    <Compile Include="Models\OsAccountModels.cs" />
-    <Compile Include="Models\Paging.cs" />
-    <Compile Include="Models\ProjectModels.cs" />
+    <Compile Include="Models\ThongKeModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

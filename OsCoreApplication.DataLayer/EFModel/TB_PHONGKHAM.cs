@@ -12,14 +12,9 @@ namespace OsCoreApplication.DataLayer.EFModel
     using System;
     using System.Collections.Generic;
     
-    public partial class ImagesUpload
+    public partial class TB_PHONGKHAM
     {
-        public long id { get; set; }
-        public string FileName { get; set; }
-        public string Url { get; set; }
-        public Nullable<System.DateTime> DateCreated { get; set; }
-        public Nullable<System.DateTime> DateUpdated { get; set; }
-        public Nullable<int> UserCreated { get; set; }
-        public Nullable<int> UserUpdated { get; set; }
+        public int MAPK { get; set; }
+        public string TENPK { get; set; }
     }
 }
