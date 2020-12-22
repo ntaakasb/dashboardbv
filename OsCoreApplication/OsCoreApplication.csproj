@@ -197,6 +197,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -1427,28 +1428,10 @@
     <Content Include="ckfinder\translations.txt" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Images\img-left-login.png" />
     <Content Include="Content\css\sb-admin-2.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
-    <Content Include="Content\Images\Icons\IconMuaBDS.png" />
-    <Content Include="Content\Images\Icons\IconBanBDS.png" />
-    <Content Include="Content\Images\Icons\IconTuVan.png" />
-    <Content Include="Content\Images\ThumbProject\DuAn10.jpg" />
-    <Content Include="Content\Images\ThumbProject\DuAn11.jpg" />
-    <Content Include="Content\Images\ThumbProject\DuAn12.jpg" />
-    <Content Include="Content\Images\ThumbProject\DuAn13.jpg" />
-    <Content Include="Content\Images\ThumbProject\DuAn4.jpg" />
-    <Content Include="Content\Images\ThumbProject\DuAn5.jpg" />
-    <Content Include="Content\Images\ThumbProject\DuAn6.jpg" />
-    <Content Include="Content\Images\ThumbProject\DuAn7.jpg" />
-    <Content Include="Content\Images\ThumbProject\DuAn8.jpg" />
-    <Content Include="Content\Images\ThumbProject\DuAn9.jpg" />
-    <Content Include="Content\img\bg.png" />
-    <Content Include="Content\img\undraw_posting_photo.svg" />
-    <Content Include="Content\img\undraw_profile.svg" />
-    <Content Include="Content\img\undraw_profile_1.svg" />
-    <Content Include="Content\img\undraw_profile_2.svg" />
-    <Content Include="Content\img\undraw_profile_3.svg" />
-    <Content Include="Content\img\undraw_rocket.svg" />
+    <Content Include="Content\Images\logo.png" />
     <Content Include="Content\js\demo\chart-area-demo.js" />
     <Content Include="Content\js\demo\chart-bar-demo.js" />
     <Content Include="Content\js\demo\chart-pie-demo.js" />
@@ -3351,13 +3334,10 @@
     <Content Include="Views\Shared\Path\_itemProduct.cshtml" />
     <Content Include="Views\Shared\Path\_itemProductLargeImage.cshtml" />
     <Content Include="Views\Shared\_LayoutDashboard.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\Images\Banner\" />
-    <Folder Include="Content\Images\ImagesUpload\" />
-    <Folder Include="Content\Images\ProjectImage\" />
-    <Folder Include="Content\Images\ThumbNews\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
