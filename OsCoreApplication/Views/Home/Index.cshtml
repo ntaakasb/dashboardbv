@@ -16,6 +16,7 @@
     }
 }
 
+
 <div class="row">
     <div class="col-xl-12 col-md-12 mb-4">
         <div class="card border-left-primary shadow h-100 py-2">
@@ -23,28 +24,36 @@
                 <div class="row">
                     <div class="col-md-2 form-group">
                         <div class="text-xs font-weight-bold text-primary text-uppercase">
-                            Xem theo
+                            Tổng quan
                         </div>
                     </div>
-                    <div class="col-md-2 form-group">
-                        <select class="form-control">
-                            <option value="DATE">Ngày</option>
-                            <option value="WEEK">Tuần</option>
-                            <option value="MONTH">Tháng</option>
-                        </select>
-                    </div>
-                    <div class="col-md-3 form-group">
-                        <div class="input-group date">
-                            <input type="text" class="form-control" id="datetimepicker" value="@DateTime.Now">
-                            <div class="input-group-addon">
-                                <span class="glyphicon glyphicon-th"></span>
-                            </div>
+                    <div class="col-md-5">
+                        <div class="form-group datetimepicker">
+                            <label>Từ ngày </label>
+                            <input type="date" class="datetimepicker" name="fromDate" id="fromDate" value="20/11/2020">
+                            <input type="time" name="fromTime" id="fromTime">
                         </div>
-
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group datetimepicker">
+                            <label>Đến ngày </label>
+                            <input type="date" class="datetimepicker" name="toDate" id="toDate">
+                            <input type="time" name="toTime" id="toTime">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+    </div>
+    <div class="col mr-2">
+        <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+            Tổng số BN đã đăng ký
+        </div>
+        <div class="h5 mb-0 font-weight-bold text-gray-800">@dangky</div>
+    </div>
+    <div class="col-auto">
+        <i class="fas fa-user fa-2x text-gray-300"></i>
     </div>
 </div>
 
@@ -376,12 +385,15 @@
     <script>
         var ls =  @Html.Raw(Json.Encode(ViewBag.DetailInWeek));
         var lsPieDate = [@chokham, @dakham, @dangkham];
-        $('#datetimepicker').datetimepicker({
-            dayOfWeekStart: 1,
-            lang: 'en',
-            disabledDates: ['1986/01/08', '1986/01/09', '1986/01/10'],
-            startDate: '1986/01/05'
-        });
+        //$('#datetimepicker').datetimepicker({
+        //    weekStart: 1,
+        //    todayBtn: 1,
+        //    autoclose: 1,
+        //    todayHighlight: 1,
+        //    startView: 2,
+        //    minView: 2,
+        //    forceParse: 0
+        //});
     </script>
     <script src="/content/js/demo/chart-area-demo.js"></script>
     <script src="/content/js/demo/chart-pie-demo.js"></script>

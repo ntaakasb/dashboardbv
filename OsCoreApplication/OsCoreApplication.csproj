@@ -1428,6 +1428,7 @@
     <Content Include="ckfinder\translations.txt" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\style-dev.css" />
     <Content Include="Content\Images\img-left-login.png" />
     <Content Include="Content\css\sb-admin-2.css" />
     <Content Include="Content\css\sb-admin-2.min.css" />
