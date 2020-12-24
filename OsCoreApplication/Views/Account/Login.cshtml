@@ -243,7 +243,7 @@ a {
                     <div class="row px-3 mb-4">
                         <div class="custom-control custom-checkbox custom-control-inline"> <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> <label for="chk1" class="custom-control-label text-sm">Lưu thông tin</label> </div> <a href="#" class="ml-auto mb-0 text-sm">Quên mật khẩu?</a>
                     </div>
-                    <div class="row mb-3 px-3"> <button type="submit" class="btn btn-green text-center">Đăng nhập</button> </div>
+                    <div class="row mb-3 px-3"> <button type="submit" id="btnDangNhap" class="btn btn-green text-center">Đăng nhập</button> </div>
                     <div class="row mb-4 px-3"> <small class="font-weight-bold">Bạn chưa có tài khoản? <a class="text-danger ">Đăng ký</a></small> </div>
                 </div>
             </div>
@@ -259,3 +259,28 @@ a {
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $('#btnDangNhap').click(function () {
+        var email = $('input[name=email]').val();
+        var password = $('input[name=password]').val();
+        $.ajax({
+            url: "/Account/LoginSubmit",
+            type: "POST",
+            data: {
+                'email': email,
+                'password': password
+            },
+            success: function (ret) {
+                debugger;
+                if (ret == "1")
+                    window.location.href = "/Home/Index";
+                else {
+                    alert("Tài khoản hoặc mật khẩu không đúng.");
+                }
+            },
+            error: function () {
+                alert("Đã có lỗi xảy ra.");
+            }
+        });
+    })
+</script>

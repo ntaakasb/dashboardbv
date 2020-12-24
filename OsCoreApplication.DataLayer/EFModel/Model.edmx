@@ -4,7 +4,16 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="HOSPITALModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="HOSPITALModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="CHART_THONGKETHEOTUAN">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NgayDuLieu" Type="int" />
+          <Property Name="TuanDuLieu" Type="int" />
+          <Property Name="SoLuong" Type="int" />
+        </EntityType>
         <EntityType Name="TB_CHITIETDKKHAM">
           <Key>
             <PropertyRef Name="MADK" />
@@ -49,6 +58,7 @@
           <Property Name="TENTRANGTHAI" Type="nchar" MaxLength="10" />
         </EntityType>
         <EntityContainer Name="HOSPITALModelStoreContainer">
+          <EntitySet Name="CHART_THONGKETHEOTUAN" EntityType="Self.CHART_THONGKETHEOTUAN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_CHITIETDKKHAM" EntityType="Self.TB_CHITIETDKKHAM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_HINHTHUCKCB" EntityType="Self.TB_HINHTHUCKCB" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TB_KHACHHANG" EntityType="Self.TB_KHACHHANG" Schema="dbo" store:Type="Tables" />
@@ -108,7 +118,17 @@
           <EntitySet Name="TB_KHACHHANG" EntityType="Self.TB_KHACHHANG" />
           <EntitySet Name="TB_PHONGKHAM" EntityType="Self.TB_PHONGKHAM" />
           <EntitySet Name="TB_TRANGTHAI" EntityType="Self.TB_TRANGTHAI" />
+          <EntitySet Name="CHART_THONGKETHEOTUAN" EntityType="HOSPITALModel.CHART_THONGKETHEOTUAN" />
         </EntityContainer>
+        <EntityType Name="CHART_THONGKETHEOTUAN">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NgayDuLieu" Type="Int32" />
+          <Property Name="TuanDuLieu" Type="Int32" />
+          <Property Name="SoLuong" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -160,6 +180,16 @@
               <MappingFragment StoreEntitySet="TB_TRANGTHAI">
                 <ScalarProperty Name="MATRANGTHAI" ColumnName="MATRANGTHAI" />
                 <ScalarProperty Name="TENTRANGTHAI" ColumnName="TENTRANGTHAI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CHART_THONGKETHEOTUAN">
+            <EntityTypeMapping TypeName="HOSPITALModel.CHART_THONGKETHEOTUAN">
+              <MappingFragment StoreEntitySet="CHART_THONGKETHEOTUAN">
+                <ScalarProperty Name="SoLuong" ColumnName="SoLuong" />
+                <ScalarProperty Name="TuanDuLieu" ColumnName="TuanDuLieu" />
+                <ScalarProperty Name="NgayDuLieu" ColumnName="NgayDuLieu" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

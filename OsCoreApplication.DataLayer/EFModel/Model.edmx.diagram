@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="HOSPITALModel.TB_KHACHHANG" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HOSPITALModel.TB_PHONGKHAM" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HOSPITALModel.TB_TRANGTHAI" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HOSPITALModel.CHART_THONGKETHEOTUAN" Width="1.5" PointX="5.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

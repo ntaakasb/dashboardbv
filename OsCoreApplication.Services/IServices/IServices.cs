@@ -13,5 +13,6 @@ namespace OsCoreApplication.Services
         ThongKeModel getThongKeTheoTuan(DateTime? fromDate, DateTime? toDate);
         List<int> getDetailBenhNhanTheoTuan(DateTime? fromDate, DateTime? toDate);
         ThongKeTheoChuyenKhoa getThongKeTheoKhoa(DateTime? fromDate, DateTime? toDate);
+        List<ThongKeTheoTuan> getThongKeTuan();
     }
 }

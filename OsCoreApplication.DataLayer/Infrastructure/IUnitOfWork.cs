@@ -11,6 +11,7 @@ namespace OsCoreApplication.DataLayer.Infrastructure
 
         IRepository<TB_KHACHHANG> KhachHangRepository { get; }
         IRepository<TB_CHITIETDKKHAM> DKKhamRepository { get; }
+        IRepository<CHART_THONGKETHEOTUAN> ThongKeTuan { get; }
         //  IRepository<OS_Schedule> ScheduleRepository { get; }
 
 

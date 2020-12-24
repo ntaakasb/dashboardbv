@@ -16,10 +16,12 @@ namespace OsCoreApplication.Services
     public partial class Services : IServices
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IMapper _mapper;
 
-        public Services(IUnitOfWork unitOfWork)
+        public Services(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _unitOfWork = unitOfWork;
+            _mapper = mapper;
         }
 
         public List<int> getDetailBenhNhanTheoTuan(DateTime? fromDate, DateTime? toDate)
@@ -123,6 +125,22 @@ namespace OsCoreApplication.Services
                 return new ThongKeTheoChuyenKhoa();
             }
         }
+        public List<ThongKeTheoTuan> getThongKeTuan()
+        {
+            try
+            {
+                List<ThongKeTheoTuan> lsData = new List<ThongKeTheoTuan>();
+                var data = _unitOfWork.ThongKeTuan.GetAllData().ToList();
+                lsData = _mapper.Map<List<CHART_THONGKETHEOTUAN>, List<ThongKeTheoTuan>>(data);
+                return lsData;
+            }
+            catch (Exception ex)
+            {
+                OsLog.Error("ConfigWebServices --> getThongKe ", ex);
+                return new List<ThongKeTheoTuan>();
+            }
+        }
+        
     }
 
 }

@@ -30,5 +30,6 @@ namespace OsCoreApplication.DataLayer.EFModel
         public virtual DbSet<TB_KHACHHANG> TB_KHACHHANG { get; set; }
         public virtual DbSet<TB_PHONGKHAM> TB_PHONGKHAM { get; set; }
         public virtual DbSet<TB_TRANGTHAI> TB_TRANGTHAI { get; set; }
+        public virtual DbSet<CHART_THONGKETHEOTUAN> CHART_THONGKETHEOTUAN { get; set; }
     }
 }

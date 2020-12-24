@@ -40,3 +40,17 @@ D:\WorkSpace\Project Outsource\dashboardbv\git\dashboardbv\OsCoreApplication.Tes
 D:\WorkSpace\Project Outsource\dashboardbv\git\dashboardbv\OsCoreApplication.Test\obj\Debug\OsCoreApplication.Test.csproj.CopyComplete
 D:\WorkSpace\Project Outsource\dashboardbv\git\dashboardbv\OsCoreApplication.Test\obj\Debug\OsCoreApplication.Test.dll
 D:\WorkSpace\Project Outsource\dashboardbv\git\dashboardbv\OsCoreApplication.Test\obj\Debug\OsCoreApplication.Test.pdb
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\bin\Debug\OsCoreApplication.Test.dll
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\bin\Debug\OsCoreApplication.Test.pdb
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\obj\Debug\OsCoreApplication.Test.csprojAssemblyReference.cache
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\obj\Debug\OsCoreApplication.Test.csproj.CoreCompileInputs.cache
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\obj\Debug\OsCoreApplication.Test.csproj.CopyComplete
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\obj\Debug\OsCoreApplication.Test.dll
+F:\workspace\bv\net\dashboardbv\OsCoreApplication.Test\obj\Debug\OsCoreApplication.Test.pdb

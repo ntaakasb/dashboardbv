@@ -18,6 +18,7 @@ namespace OsCoreApplication.DataLayer.DataAccess
 
         private IRepository<TB_KHACHHANG> _khachhangRepository;
         private IRepository<TB_CHITIETDKKHAM> _DKKhamRepository;
+        private IRepository<CHART_THONGKETHEOTUAN> _ThongKeTuan;
 
         // private IRepository<OS_Schedule> _scheduleRepository;
 
@@ -25,7 +26,7 @@ namespace OsCoreApplication.DataLayer.DataAccess
 
         public IRepository<TB_CHITIETDKKHAM> DKKhamRepository => _DKKhamRepository ?? (_DKKhamRepository = new Repository<TB_CHITIETDKKHAM>(_dbContext));
 
-
+        public IRepository<CHART_THONGKETHEOTUAN> ThongKeTuan => _ThongKeTuan ?? (_ThongKeTuan = new Repository<CHART_THONGKETHEOTUAN>(_dbContext));
         // public IRepository<OS_Schedule> ScheduleRepository => _scheduleRepository ?? (_scheduleRepository = new Repository<OS_Schedule>(_dbContext));
 
         public void SaveChanges()

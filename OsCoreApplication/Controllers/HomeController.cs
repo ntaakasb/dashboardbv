@@ -17,10 +17,12 @@ namespace OsCoreApplication.Controllers
         public ActionResult Index()
         {
             DateTime? date = null;
-            ViewBag.ThongKe = _services.getThongKeTheoTuan(null, null);
+            ViewBag.ThongKe = _services.getThongKeTuan();
             ViewBag.DetailInWeek = _services.getDetailBenhNhanTheoTuan(null, null);
             ViewBag.ThongKeTheoKhoa = _services.getThongKeTheoKhoa(null, null);
             //end
+
+
             return View();
         }
 

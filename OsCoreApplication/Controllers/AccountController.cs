@@ -18,5 +18,15 @@ namespace OsCoreApplication.Controllers
         {
             return View();
         }
+
+        public JsonResult LoginSubmit(string email, string password)
+        {
+            if(email.ToUpper().Trim() == "ADMIN" && password.Trim()  == "admin")
+            {
+                Session["IsLoged"] = 1;
+                return Json("1");
+            }
+            return Json("0");
+        }
     }
 }
